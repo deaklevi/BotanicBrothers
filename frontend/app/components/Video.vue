@@ -1,5 +1,5 @@
 <template>
-  <section ref="videoSection" class="relative h-screen w-full overflow-hidden bg-black">
+  <section ref="videoSection" class="relative h-screen w-full overflow-hidden bg-black z-0">
     <video
       ref="videoPlayer"
       muted
