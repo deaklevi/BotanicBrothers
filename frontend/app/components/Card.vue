@@ -8,7 +8,7 @@ const props = defineProps({
 
 <template>
 
-<div class="bg-[#FAF1E1] rounded-xl p-6 text-center shadow-md max-w-xs">
+<div class="bg-[#FAF1E1] rounded-xl p-6 text-center shadow-md max-w-xs h-[30rem]">
     <img :src="`/icons/${img}.png`" :alt="`${img}`" class="h-24 mx-auto mb-2">
     <h2 class="text-center font-bold mb-6 text-[#1A4A2B] text-lg">{{ title }}</h2>
     

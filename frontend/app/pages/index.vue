@@ -12,9 +12,13 @@ import { V } from 'vue-router/dist/index-BzEKChPW.js';
 
     <Video />
 
-    <div class="mt-[10vh] max-w-7xl mx-auto">
-        <CardContainer />
+    <div class="bg-green-500 pt-[10vh]">
+        <div class="mt-[10vh] max-w-7xl mx-auto ">
+            <CardContainer class="mb-24" />
+
+            <OfferContainer />
+
+        </div>
     </div>
-    
     
 </template>
