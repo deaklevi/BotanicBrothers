@@ -90,6 +90,23 @@ const handleFileUpload = (event) => {
 };
 
 const submitForm = async () => {
-  console.log('Form adatok:', form.value);
+  try {
+    const response = await $fetch('http://localhost:8000/api/contact', {
+      method: 'POST',
+      body: {
+        lastName: form.value.lastName,
+        firstName: form.value.firstName,
+        email: form.value.email,
+        phone: form.value.phone,
+        message: form.value.message,
+      }
+    });
+    
+    alert('Köszönjük! Az üzenetet sikeresen elküldtük.');
+    
+  } catch (error) {
+    console.error('Hiba történt a küldés során:', error);
+    alert('Sajnos hiba történt az elküldés során. Próbálja újra később!');
+  }
 };
 </script>
