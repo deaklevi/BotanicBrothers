@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\OfferMail;
+use App\Mail\CustomerConfirmationMail;
 
 class ContactController extends Controller
 {
@@ -19,8 +20,9 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
-        Mail::to('horvathgergo@neologic.hu')->send(new OfferMail($validated));
+        Mail::to(env('MAIL_FROM_ADDRESS'))->send(new OfferMail($validated));
 
+        Mail::to($validated['email'])->send(new CustomerConfirmationMail($validated));
         return response()->json(['message' => 'Üzenet sikeresen elküldve!'], 200);
     }
 }
