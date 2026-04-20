@@ -1,5 +1,5 @@
 <template>
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-10 p-10 items-center relative">
+  <section id="inquiry" class="grid grid-cols-1 md:grid-cols-2 gap-10 p-10 items-center relative">
     
     <div class="contact-text">
       <h2 class="text-3xl md:text-4xl font-extrabold mb-8">Kérjen ajánlatot</h2>

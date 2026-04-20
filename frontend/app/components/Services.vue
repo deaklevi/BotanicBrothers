@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-16 pb-32 md:py-24 px-6 overflow-x-hidden relative">
+  <section id="services" class="pt-16 pb-32 md:py-24 px-6 overflow-x-hidden relative">
     <div class="max-w-7xl mx-auto">
       
       <div class="text-center mb-16 md:mb-24">
