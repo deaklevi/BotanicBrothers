@@ -19,12 +19,12 @@
         <div class="flex flex-col items-center text-center space-y-3 text-gray-200">
           <h3 class="text-white font-bold tracking-widest uppercase mb-2">Kapcsolat</h3>
           
-          <a href="mailto:info@botanicbrothers.hu" class="hover:text-green-400 transition-colors flex items-center gap-2">
-            <span class="text-xs">✉</span> info@botanicbrothers.hu
+          <a href="mailto:contact.botanicbrothers@gmail.com" class="hover:text-green-400 transition-colors flex items-center gap-2">
+            <span class="text-xs">✉</span> contact.botanicbrothers@gmail.com
           </a>
           
-          <a href="tel:+36301234567" class="hover:text-green-400 transition-colors flex items-center gap-2">
-            <span class="text-xs">📞</span> +36 30 123 4567
+          <a href="tel:+36301311556" class="hover:text-green-400 transition-colors flex items-center gap-2">
+            <span class="text-xs">📞</span> +36 30 131 1556
           </a>
           
           <p class="flex items-center gap-2">
