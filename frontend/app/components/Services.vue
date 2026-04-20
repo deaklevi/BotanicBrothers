@@ -17,7 +17,7 @@
               <h3 class=" text-3xl md:text-4xl font-bold mb-4 tracking-widest">
                 {{ services[currentIndex].title }}
               </h3>
-              <p class=" text-base md:text-lg leading-relaxed max-w-md">
+              <p class="font-bold text-base md:text-lg leading-relaxed max-w-md">
                 {{ services[currentIndex].description }}
               </p>
             </div>
