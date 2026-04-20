@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-16 pb-32 md:py-24 px-6 overflow-x-hidden z-10 relative">
+  <section class="pt-16 pb-32 md:py-24 px-6 overflow-x-hidden relative">
     <div class="max-w-7xl mx-auto">
       
       <div class="text-center mb-16 md:mb-24">
@@ -9,7 +9,7 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center -z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
         
         <div class="order-2 lg:order-1 space-y-6 mt-20 md:mt-0">
           <transition name="fade" mode="out-in">
