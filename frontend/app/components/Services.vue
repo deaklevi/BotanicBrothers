@@ -3,9 +3,9 @@
     <div class="max-w-7xl mx-auto">
       
       <div class="text-center mb-16 md:mb-24">
-        <h2 class="text-3xl md:text-7xl font-black uppercase tracking-tighter bg-cover bg-center bg-clip-text text-transparent"
+        <h2 class="text-3xl md:text-6xl font-black uppercase tracking-tighter bg-cover bg-center bg-clip-text text-transparent"
             style="background-image: url('/text-bg.jpg');">
-          Szolgáltatásaink
+          Így fogjuk megújjítani a kerted
         </h2>
       </div>
 
@@ -14,10 +14,10 @@
         <div class="order-2 lg:order-1 space-y-6 mt-20 md:mt-0">
           <transition name="fade" mode="out-in">
             <div :key="currentIndex">
-              <h3 class="text-[#e6c98a] text-3xl md:text-4xl font-light mb-4 uppercase tracking-widest">
+              <h3 class=" text-3xl md:text-4xl font-bold mb-4 tracking-widest">
                 {{ services[currentIndex].title }}
               </h3>
-              <p class="text-gray-400 text-base md:text-lg leading-relaxed max-w-md">
+              <p class=" text-base md:text-lg leading-relaxed max-w-md">
                 {{ services[currentIndex].description }}
               </p>
             </div>
@@ -28,7 +28,7 @@
               v-for="(_, index) in services" 
               :key="index"
               @click="goToSlide(index)"
-              :class="['h-2 transition-all duration-300 rounded-full', currentIndex === index ? 'w-12 bg-[#e6c98a]' : 'w-2 bg-gray-700']"
+              :class="['h-2 transition-all duration-300 rounded-full', currentIndex === index ? 'w-12 bg-[#FAF1E1]' : 'w-2 bg-gray-700']"
             ></button>
           </div>
         </div>
@@ -60,7 +60,7 @@
           <div class="flex md:hidden absolute -bottom-20 left-0 w-[85%] justify-center gap-10 z-[100]">
             <button 
               @click="prevSlide" 
-              class="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full shadow-2xl active:scale-95 transition-transform"
+              class="w-14 h-14 flex items-center justify-center bg-[#FAF1E1] text-black rounded-full shadow-2xl active:scale-95 transition-transform"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
@@ -69,7 +69,7 @@
 
             <button 
               @click="nextSlide" 
-              class="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full shadow-2xl active:scale-95 transition-transform"
+              class="w-14 h-14 flex items-center justify-center bg-[#FAF1E1] text-black rounded-full shadow-2xl active:scale-95 transition-transform"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />

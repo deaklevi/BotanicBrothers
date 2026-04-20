@@ -27,12 +27,12 @@
           />
         </div>
 
-      <div class="flex-grow flex flex-col items-center justify-center text-white text-center px-4">
-        <h1 class="text-6xl md:text-7xl font-thin tracking-tighter uppercase mb-6 max-w-7xl">
-          Készen áll kertjét megújítani?
+      <div class="flex-grow flex flex-col items-center justify-center text-center px-4 ]">
+        <h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter  mb-6 max-w-7xl">
+          Készen állsz kerted megújítani?
         </h1>
-        <p class="text-sm md:text-base text-white/60 tracking-[0.4em] uppercase font-light  max-w-7xl">
-          Válaszoljon meg néhány kérdést, és azonnal mutatjuk a következő lépést
+        <p class="text-md md:text-base tracking-[0.4em] font-semibold uppercase font-light  max-w-7xl">
+          Válaszolj meg néhány kérdést, <br> és azonnal mutatjuk a következő lépést
         </p>
       </div>
 

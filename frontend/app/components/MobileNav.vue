@@ -24,9 +24,9 @@
       leave-to-class="opacity-0 -translate-y-4"
     >
       <div v-if="isOpen" class="absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 py-6 px-8 flex flex-col gap-6">
-        <NuxtLink @click="isOpen = false" to="/" class="text-white text-lg uppercase tracking-widest border-b border-white/5 pb-2">Szolgáltatásaink</NuxtLink>
-        <NuxtLink @click="isOpen = false" to="#" class="text-white text-lg uppercase tracking-widest border-b border-white/5 pb-2">Rólunk</NuxtLink>
-        <NuxtLink @click="isOpen = false" to="#" class="text-white text-lg uppercase tracking-widest border-b border-white/5 pb-2">Ajánlatkérés</NuxtLink>
+        <NuxtLink @click="isOpen = false" to="/" class="text-lg uppercase tracking-widest border-b border-white/5 pb-2">Szolgáltatásaink</NuxtLink>
+        <NuxtLink @click="isOpen = false" to="#" class="text-lg uppercase tracking-widest border-b border-white/5 pb-2">Rólunk</NuxtLink>
+        <NuxtLink @click="isOpen = false" to="#" class="text-lg uppercase tracking-widest border-b border-white/5 pb-2">Ajánlatkérés</NuxtLink>
       </div>
     </transition>
   </div>

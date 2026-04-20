@@ -8,9 +8,9 @@
   ]"
 >
     <div class="flex gap-10">
-      <NuxtLink to="/" class="text-white text-sm uppercase tracking-widest hover:text-gray-400 transition">Szolgáltatásaink</NuxtLink>
-      <NuxtLink to="#" class="text-white text-sm uppercase tracking-widest hover:text-gray-400 transition">Rólunk</NuxtLink>
-      <NuxtLink to="#" class="text-white text-sm uppercase tracking-widest hover:text-gray-400 transition">Ajánlatkérés</NuxtLink>
+      <NuxtLink to="/" class="text-sm uppercase tracking-widest hover:text-gray-400 transition">Szolgáltatásaink</NuxtLink>
+      <NuxtLink to="#" class="text-sm uppercase tracking-widest hover:text-gray-400 transition">Rólunk</NuxtLink>
+      <NuxtLink to="#" class="text-sm uppercase tracking-widest hover:text-gray-400 transition">Ajánlatkérés</NuxtLink>
     </div>
   </nav>
 </template>
