@@ -6,4 +6,5 @@
     relative z-0">
         <slot class="max-w-7xl mx-auto " />
     </main>
+    <Footer />
 </template>
