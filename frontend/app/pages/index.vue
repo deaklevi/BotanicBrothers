@@ -8,11 +8,10 @@ import { V } from 'vue-router/dist/index-BzEKChPW.js';
 
         <Services class="-z-[100]"/>
 
-    </Layout>
-    <Video />
+    <!-- <Video /> -->
 
 
-    <div class="bg-green-800 pt-[10vh]">
+    <div class=" pt-[10vh]">
         <div class="mt-[10vh] max-w-7xl mx-auto ">
             <CardContainer class="mb-24" />
 
@@ -20,5 +19,6 @@ import { V } from 'vue-router/dist/index-BzEKChPW.js';
 
         </div>
     </div>
+    </Layout>
     
 </template>
