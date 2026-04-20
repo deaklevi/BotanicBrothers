@@ -8,7 +8,8 @@ import { V } from 'vue-router/dist/index-BzEKChPW.js';
 
         <Services class="-z-[100]"/>
 
-    <!-- <Video /> -->
+        
+    <Video />
 
 
     <div class=" pt-[10vh]">
