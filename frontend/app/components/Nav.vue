@@ -1,12 +1,12 @@
 <template>
   <nav
-    :class="[
-      'left-0 w-full z-50 transition-all duration-500 ease-in-out px-8 py-5 flex justify-center items-center',
-      isSticky 
-        ? 'fixed top-0 bg-black/60 backdrop-blur-lg border-b border-white/10' 
-        : 'absolute bottom-0 bg-transparent'
-    ]"
-  >
+  :class="[
+    'left-0 w-full z-[9999] transform-gpu transition-all duration-500 ease-in-out px-8 py-5 flex justify-center items-center',
+    isSticky 
+      ? 'fixed top-0 bg-black/60 backdrop-blur-lg border-b border-white/10' 
+      : 'absolute bottom-0 bg-transparent'
+  ]"
+>
     <div class="flex gap-10">
       <NuxtLink to="/" class="text-white text-sm uppercase tracking-widest hover:text-gray-400 transition">Szolgáltatásaink</NuxtLink>
       <NuxtLink to="#" class="text-white text-sm uppercase tracking-widest hover:text-gray-400 transition">Rólunk</NuxtLink>

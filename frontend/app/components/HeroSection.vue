@@ -36,7 +36,7 @@
         </p>
       </div>
 
-      <Nav class="hidden md:flex" />
+      <Nav class="hidden md:flex z-[9999]" />
     </div>
   </section>
 </template>

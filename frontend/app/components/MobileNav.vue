@@ -1,5 +1,5 @@
 <template>
-  <div class="md:hidden sticky top-0 z-[60] w-full">
+  <div class="md:hidden sticky top-0 z-[1000] w-full">
     <div class="bg-black/80 backdrop-blur-lg border-b border-white/10 px-6 py-4 flex justify-between items-center">
         <h2 class="text-1xl md:text-4xl font-bold uppercase bg-gradient-to-b from-[#f3e5ab] via-[#e6c98a] to-[#d4af37] bg-clip-text text-transparent">
             BotanicBrothers
