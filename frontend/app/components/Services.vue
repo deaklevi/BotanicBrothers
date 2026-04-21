@@ -5,7 +5,7 @@
       <div class="text-center mb-16 md:mb-24">
         <h2 class="text-3xl md:text-6xl font-black uppercase tracking-tighter bg-cover bg-center bg-clip-text text-transparent"
             style="background-image: url('/text-bg.jpg');">
-          Így fogjuk megújjítani a kerted
+          Így fogjuk megújítani a kerted
         </h2>
       </div>
 
