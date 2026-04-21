@@ -10,7 +10,7 @@ const props = defineProps({
   <div class="bg-[#FAF1E1] rounded-3xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col h-full border border-black/5">
     
     <div class="mb-6 flex justify-center">
-      <div class="p-4 bg-white/50 rounded-2xl backdrop-blur-sm">
+      <div class="p-4 rounded-2xl backdrop-blur-sm">
         <img :src="`/icons/${img}.png`" :alt="img" class="h-16 w-16 object-contain grayscale-[0.2]">
       </div>
     </div>

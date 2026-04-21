@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="pt-16 pb-32 md:py-24 px-6 overflow-x-hidden relative">
+  <section id="services" class="pt-16 pb-32 md:py-24 px-6 overflow-x-hidden relative lg:h-screen h-full">
     <div class="max-w-7xl mx-auto">
       
       <div class="text-center mb-16 md:mb-24">
@@ -11,7 +11,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
         
-        <div class="order-2 lg:order-1 space-y-6 mt-20 md:mt-0">
+        <div class="order-2 lg:order-1 space-y-6 mt-20 lg:mt-0">
           <transition name="fade" mode="out-in">
             <div :key="currentIndex">
               <h3 class=" text-3xl md:text-4xl font-bold mb-4 tracking-widest">
@@ -38,7 +38,7 @@
              @touchend="handleTouchEnd">
           
           <div class="relative w-full h-full flex items-center">
-            <transition-group name="slide">
+            <transition-group :name="transitionName">
               <div 
                 :key="'main-' + currentIndex"
                 class="absolute left-0 w-[85%] lg:w-4/5 h-full rounded-2xl overflow-hidden shadow-2xl z-20 transition-all duration-700"
@@ -57,10 +57,10 @@
             </transition-group>
           </div>
 
-          <div class="flex md:hidden absolute -bottom-20 left-0 w-[85%] justify-center gap-10 z-[100]">
+          <div class="flex absolute -bottom-20 md:-bottom-24 left-0 w-[85%] lg:w-4/5 justify-center gap-10 z-[100]">
             <button 
               @click="prevSlide" 
-              class="w-14 h-14 flex items-center justify-center bg-[#FAF1E1] text-black rounded-full shadow-2xl active:scale-95 transition-transform"
+              class="w-14 h-14 flex items-center justify-center bg-[#FAF1E1] text-black rounded-full shadow-2xl active:scale-95 transition-transform hover:scale-105"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
@@ -69,7 +69,7 @@
 
             <button 
               @click="nextSlide" 
-              class="w-14 h-14 flex items-center justify-center bg-[#FAF1E1] text-black rounded-full shadow-2xl active:scale-95 transition-transform"
+              class="w-14 h-14 flex items-center justify-center bg-[#FAF1E1] text-black rounded-full shadow-2xl active:scale-95 transition-transform hover:scale-105"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
@@ -84,9 +84,12 @@
 </template>
 
 <script setup>
+import { ref, computed } from 'vue'
+
 const currentIndex = ref(0)
 const touchStartX = ref(0)
 const touchEndX = ref(0)
+const transitionName = ref('slide-next') // Alapértelmezett irány
 
 const services = [
   { title: "Karbantartás", description: "Rendszeres kertkarbantartással biztosítjuk, hogy kertje mindig rendezett, egészséges és esztétikus maradjon. Szezonális igényekhez igazodva végezzük a szükséges ápolási feladatokat.", image: "/service1.png" },
@@ -101,14 +104,17 @@ const services = [
 const nextIndex = computed(() => (currentIndex.value + 1) % services.length)
 
 const nextSlide = () => {
+  transitionName.value = 'slide-next'
   currentIndex.value = nextIndex.value
 }
 
 const prevSlide = () => {
+  transitionName.value = 'slide-prev'
   currentIndex.value = (currentIndex.value - 1 + services.length) % services.length
 }
 
 const goToSlide = (index) => {
+  transitionName.value = index > currentIndex.value ? 'slide-next' : 'slide-prev'
   currentIndex.value = index
 }
 
@@ -123,11 +129,11 @@ const handleTouchEnd = (e) => {
 }
 
 const handleSwipe = () => {
-  const swipeThreshold = 50 // minimum ennyit kell húzni pixelben
+  const swipeThreshold = 50
   if (touchStartX.value - touchEndX.value > swipeThreshold) {
-    nextSlide() // Balra húzás -> Következő
+    nextSlide()
   } else if (touchEndX.value - touchStartX.value > swipeThreshold) {
-    prevSlide() // Jobbra húzás -> Előző
+    prevSlide()
   }
 }
 </script>
@@ -137,8 +143,13 @@ const handleSwipe = () => {
 .fade-enter-active, .fade-leave-active { transition: opacity 0.4s ease; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
 
-/* Slider animáció */
-.slide-enter-active, .slide-leave-active { transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-.slide-enter-from { opacity: 0; transform: translateX(50px) scale(0.9); }
-.slide-leave-to { opacity: 0; transform: translateX(-100px) scale(0.95); }
+/* Előre irányú animáció (Next) */
+.slide-next-enter-active, .slide-next-leave-active { transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+.slide-next-enter-from { opacity: 0; transform: translateX(100px) scale(0.9); }
+.slide-next-leave-to { opacity: 0; transform: translateX(-100px) scale(0.95); }
+
+/* Hátra irányú animáció (Prev) */
+.slide-prev-enter-active, .slide-prev-leave-active { transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+.slide-prev-enter-from { opacity: 0; transform: translateX(-100px) scale(0.9); }
+.slide-prev-leave-to { opacity: 0; transform: translateX(100px) scale(0.95); }
 </style>
